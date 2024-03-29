@@ -11,13 +11,9 @@
 
 // }
 
-function add(num1, num2) {
-  return num1 + num2;
-};
+let add = (leftOperand, rightOperand) => leftOperand + rightOperand;
 
-function subtract(num1, num2) {
-  return num1 - num2;
-};
+let subtract = (leftOperand, rightOperand) => leftOperand - rightOperand;
 
 function multiply(num1, num2) {
   return num1 * num2;
