@@ -1,0 +1,155 @@
+* {
+  /* border: 0.5px solid; */
+}
+
+:root {
+  --calculator-color: rgb(232, 225, 216);
+  --display-color: rgb(254, 250, 246);
+  --numerical-button-color: rgb(252, 245, 236);
+  --utility-button-color: rgb(234, 171, 164);
+  --operator-button-color: rgb(250, 228, 146);
+}
+
+/* Clockwork GameBoy */
+/* :root {
+  --calculator-color: rgb(178, 183, 176);
+  --display-color: rgb(32, 33, 28);
+  --display-text-color: rgb(61, 139, 121);
+  --numerical-button-color: rgb(101, 103, 95);
+  --utility-button-color: rgb(180, 67, 61);
+  --operator-button-color: rgb(86, 109, 99);
+} */
+
+/* Vintage Calculator */
+/* :root {
+  --calculator-color: rgb(184, 186, 169);
+  --display-color: rgb(32, 33, 28);
+  --display-text-color: rgb(117, 240, 225);
+  --numerical-button-color: rgb(67, 72, 75);
+  --utility-button-color: rgb(137, 47, 61);
+  --clear-button-color: rgb(172, 75, 58);
+  --operator-button-color: rgb(107, 138, 129);
+} */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--calculator-color);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  /* width: calc(100vw/3); */
+}
+
+.calculator .display {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: stretch;
+  resize: none;
+}
+
+.calculator .display textarea {
+  flex: 1;
+  align-self: stretch;
+  resize: none;
+  background-color: var(--display-color);
+  color: var(--display-text-color);
+}
+
+
+.button {
+  display: flex;
+  flex-direction: row;
+  flex: 4;
+  align-self: stretch;
+}
+
+.button button {
+  border: 0.5px solid;
+  /* box-shadow: -1px 1px 0px rgb(167, 52, 39),
+    -2px 2px 0px rgb(167, 52, 39),
+    -3px 3px 0px rgb(167, 52, 39),
+    -4px 4px 0px rgb(167, 52, 39),
+    -5px 5px 0px rgb(167, 52, 39),
+    -6px 6px 0px rgb(167, 52, 39); */
+}
+
+.numerical {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: stretch;
+  flex: 3;
+}
+
+.numerical * {
+  flex: 0 0 calc(100%/3);
+}
+
+.numerical button {
+  background-color: var(--numerical-button-color);
+}
+
+.numerical [name="zero"] {
+  flex: 2;
+}
+
+.non-numerical {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: stretch;
+  flex: 2;
+}
+
+.non-numerical * {
+  flex: 0 0 calc(100%/2);
+  align-self: stretch;
+}
+
+.non-numerical .utility {
+  background-color: var(--utility-button-color);
+}
+
+.non-numerical .operator {
+  background-color: var(--operator-button-color);
+}
+
+.non-numerical [name="clear-all"] {
+  order: 1;
+}
+
+.non-numerical [name="clear"] {
+  order: 2;
+  background-color: var(--clear-button-color);
+}
+
+.non-numerical [name="subtraction"] {
+  order: 3;
+}
+
+.non-numerical [name="division"] {
+  order: 4;
+}
+
+.non-numerical [name="addition"] {
+  order: 5;
+}
+
+.non-numerical [name="multiplication"] {
+  order: 6;
+}
+
+.non-numerical [name="equals"] {
+  order: 7;
+  flex: 2;
+}
