@@ -18,7 +18,6 @@ const clear_all_button = document.querySelector('[name="clear-all"]');
 const equals_button = document.querySelector('[name="equals"]');
 const clear_button = document.querySelector('[name="clear"]');
 
-
 digit_buttons.forEach(button => {
   button.addEventListener('click', function (event) {
     const displayLen = display.textContent.length;

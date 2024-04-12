@@ -1,13 +1,24 @@
 * {
   /* border: 0.5px solid; */
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-size: 48px;
+  font-weight: 200;
+  font-style: normal;
 }
 
 :root {
   --calculator-color: rgb(232, 225, 216);
   --display-color: rgb(254, 250, 246);
+  --display-text-color: rgb(61, 139, 121);
   --numerical-button-color: rgb(252, 245, 236);
+  --numerical-button-shadow-color: rgb(178 169 158);
   --utility-button-color: rgb(234, 171, 164);
+  --utility-button-shadow-color: rgb(167, 52, 39);
+  --clear-button-color: rgb(243, 196, 161);
+  --clear-button-shadow-color: rgb(194, 117, 59);
   --operator-button-color: rgb(250, 228, 146);
+  --operator-button-shadow-color: rgb(212, 183, 70);
 }
 
 /* Clockwork GameBoy */
@@ -19,7 +30,6 @@
   --utility-button-color: rgb(180, 67, 61);
   --operator-button-color: rgb(86, 109, 99);
 } */
-
 /* Vintage Calculator */
 /* :root {
   --calculator-color: rgb(184, 186, 169);
@@ -30,7 +40,6 @@
   --clear-button-color: rgb(172, 75, 58);
   --operator-button-color: rgb(107, 138, 129);
 } */
-
 body {
   display: flex;
   flex-direction: column;
@@ -65,7 +74,6 @@ body {
   color: var(--display-text-color);
 }
 
-
 .button {
   display: flex;
   flex-direction: row;
@@ -74,13 +82,14 @@ body {
 }
 
 .button button {
+  /* margin: 2.5px; */
   border: 0.5px solid;
-  /* box-shadow: -1px 1px 0px rgb(167, 52, 39),
-    -2px 2px 0px rgb(167, 52, 39),
-    -3px 3px 0px rgb(167, 52, 39),
-    -4px 4px 0px rgb(167, 52, 39),
-    -5px 5px 0px rgb(167, 52, 39),
-    -6px 6px 0px rgb(167, 52, 39); */
+  padding: 0;
+}
+
+.button button:active {
+  box-shadow: none;
+  transform: translate(-5px, 5px);
 }
 
 .numerical {
@@ -97,6 +106,12 @@ body {
 
 .numerical button {
   background-color: var(--numerical-button-color);
+  box-shadow: -1px 1px 0px var(--numerical-button-shadow-color),
+    -2px 2px 0px var(--numerical-button-shadow-color),
+    -3px 3px 0px var(--numerical-button-shadow-color),
+    -4px 4px 0px var(--numerical-button-shadow-color),
+    -5px 5px 0px var(--numerical-button-shadow-color),
+    -6px 6px 0px var(--numerical-button-shadow-color);
 }
 
 .numerical [name="zero"] {
@@ -118,10 +133,22 @@ body {
 
 .non-numerical .utility {
   background-color: var(--utility-button-color);
+  box-shadow: -1px 1px 0px var(--utility-button-shadow-color),
+    -2px 2px 0px var(--utility-button-shadow-color),
+    -3px 3px 0px var(--utility-button-shadow-color),
+    -4px 4px 0px var(--utility-button-shadow-color),
+    -5px 5px 0px var(--utility-button-shadow-color),
+    -6px 6px 0px var(--utility-button-shadow-color);
 }
 
 .non-numerical .operator {
   background-color: var(--operator-button-color);
+  box-shadow: -1px 1px 0px var(--operator-button-shadow-color),
+    -2px 2px 0px var(--operator-button-shadow-color),
+    -3px 3px 0px var(--operator-button-shadow-color),
+    -4px 4px 0px var(--operator-button-shadow-color),
+    -5px 5px 0px var(--operator-button-shadow-color),
+    -6px 6px 0px var(--operator-button-shadow-color);
 }
 
 .non-numerical [name="clear-all"] {
@@ -131,6 +158,12 @@ body {
 .non-numerical [name="clear"] {
   order: 2;
   background-color: var(--clear-button-color);
+  box-shadow: -1px 1px 0px var(--utility-button-shadow-color),
+    -2px 2px 0px var(--clear-button-shadow-color),
+    -3px 3px 0px var(--clear-button-shadow-color),
+    -4px 4px 0px var(--clear-button-shadow-color),
+    -5px 5px 0px var(--clear-button-shadow-color),
+    -6px 6px 0px var(--clear-button-shadow-color);
 }
 
 .non-numerical [name="subtraction"] {
