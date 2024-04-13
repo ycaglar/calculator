@@ -13,10 +13,11 @@ const operate = (leftOperand, operator, rightOperand) => operators[operator](lef
 const digit_buttons = document.querySelectorAll('.digit');
 const dot_button = document.querySelector('.dot');
 const display = document.querySelector('.display textarea');
-const operator_buttons = document.querySelector('.operator');
+const operator_buttons = document.querySelectorAll('.operator');
 const clear_all_button = document.querySelector('[name="clear-all"]');
 const equals_button = document.querySelector('[name="equals"]');
 const clear_button = document.querySelector('[name="clear"]');
+
 
 digit_buttons.forEach(button => {
   button.addEventListener('click', function (event) {
@@ -46,16 +47,19 @@ let leftOperand = 0;
 let operator = '';
 let rightOperand = 0;
 
-operator_buttons.addEventListener('click', function (event) {
-
-  if (display.textContent == '' && event.target.textContent == '-') {
-    display.textContent = '-';
-  } else if (!isNaN(display.textContent)) {
-    leftOperand = Number(display.textContent)
-    operator = event.target.textContent;
-    display.textContent = '';
-  };
+operator_buttons.forEach(operator_button => {
+  operator_button.addEventListener('click', function (event) {
+    if (display.textContent == '' && event.target.textContent == '-') {
+      display.textContent = '-';
+    } else if (!isNaN(display.textContent)) {
+      leftOperand = Number(display.textContent)
+      operator = event.target.textContent;
+      display.textContent = '';
+    };
+  });
 });
+
+
 
 equals_button.addEventListener('click', function (event) {
   if (display.textContent != '') {
