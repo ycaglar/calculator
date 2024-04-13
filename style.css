@@ -72,6 +72,7 @@ body {
   resize: none;
   background-color: var(--display-color);
   color: var(--display-text-color);
+  margin-left: -6px;
 }
 
 .button {
@@ -83,8 +84,9 @@ body {
 
 .button button {
   /* margin: 2.5px; */
-  border: 0.5px solid;
-  padding: 0;
+  /* border: 0.5px solid; */
+  border: none;
+  /* padding: 0; */
 }
 
 .button button:active {
@@ -98,10 +100,12 @@ body {
   flex-wrap: wrap;
   align-self: stretch;
   flex: 3;
+  /* gap: 5px; */
 }
 
 .numerical * {
-  flex: 0 0 calc(100%/3);
+  /* flex: 0 0 calc(100%/3); */
+  flex: 0 0 calc(100%/3 - 7px);
 }
 
 .numerical button {
@@ -124,10 +128,17 @@ body {
   flex-wrap: wrap;
   align-self: stretch;
   flex: 2;
+  /* gap: 5px; */
+}
+
+.button,
+.numerical,
+.non-numerical {
+  gap: 10px;
 }
 
 .non-numerical * {
-  flex: 0 0 calc(100%/2);
+  flex: 0 0 calc(100%/2 - 5px);
   align-self: stretch;
 }
 
