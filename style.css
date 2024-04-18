@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "Reddit Mono";
+  src: url(../fonts/RedditMono-VariableFont_wght.ttf);
+}
+
 * {
   border-radius: 5px;
   font-family: "Reddit Mono", monospace;
   font-optical-sizing: auto;
-  font-size: 48px;
+  font-size: 1.73rem;
   font-weight: 200;
   font-style: normal;
 }
