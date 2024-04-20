@@ -1,8 +1,8 @@
 <img  align="right" width="15%" src="https://raw.githubusercontent.com/ycaglar/.github/master/badge.png" alt="logo">
 
-<div class="section-header">
-  <h1>Calculator</h1>
-</div>
+<h1>
+  <p>Calculator</p>
+</h1>
 
 ## Overview
 
