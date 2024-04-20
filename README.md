@@ -1,12 +1,8 @@
-<style>
-  h1, h2, h3, h4, h5, h6 {
-    border-bottom: none !important;
-  }
-</style>
-
 <img  align="right" width="15%" src="https://raw.githubusercontent.com/ycaglar/.github/master/badge.png" alt="logo">
 
-<h1> Calculator </h1>
+<div class="section-header">
+  <h1>Calculator</h1>
+</div>
 
 ## Overview
 
