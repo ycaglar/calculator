@@ -1,6 +1,6 @@
 <img  align="right" width="15%" src="https://raw.githubusercontent.com/ycaglar/.github/master/badge.png" alt="logo">
 
-<h1 style="border-bottom: none;"> Calculator</h1>
+# Calculator
 
 ## Overview
 
