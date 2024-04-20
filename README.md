@@ -6,7 +6,7 @@
 
 Designed with simplicity in mind, this app aims to provide a basic yet functional tool for performing arithmetic calculations.
 
-![Screenshot](./calculator.png)
+![Screenshot](./UI-Preview.png)
 
 ## How to Contribute
 
